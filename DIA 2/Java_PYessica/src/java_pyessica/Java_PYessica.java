@@ -9,9 +9,9 @@ import java.util.Scanner;
  */
 public class Java_PYessica {
     public static void main(String[] args) {
-        ArrayList<String> listaCampers = new ArrayList<String>();
-        ArrayList<String> listaTrainer = new ArrayList<>();
-        ArrayList<String> listaCoordinador = new ArrayList<>();
+        ArrayList<Campers> listaCampers = new ArrayList<>();
+        ArrayList<Trainer> listaTrainer = new ArrayList<>();
+        ArrayList<Coordinador> listaCoordinador = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
         
         Campers camper1 = new Campers(1, "12-0812", "luis", "luism", "luis", "caicedo", "av 12 calle 13", "esperanza", 25498379, 52167894, "Inscrito", "Bajo", "t2");
@@ -60,25 +60,25 @@ public class Java_PYessica {
                             case 1:
                                 System.out.println("ingresa el nuevo nombre: ");
                                 String nombre = scan.nextLine();
-                                camper1.getnom(nombre);
+                                camper1.nombre=nombre;
                                 System.out.println("El nombre fue actualizado con exito" + nombre);
                                 break;
                             case 2:
                                 System.out.println("Ingresa el nuevo apellido: ");
                                 String apellido = scan.nextLine();
-                                camper1.getape(apellido);
+                                camper1.apellido = apellido;
                                 System.out.println("El nombre fue actualizado con exito" + apellido);
                                 break;
                             case 3: 
                                 System.out.println("Ingresa el nuevo acudiente: ");
                                 String acudiente = scan.nextLine();
-                                camper1.getacu(acudiente);
+                                camper1.acudiente = acudiente;
                                 System.out.println("El acudiente fue actualizado con exito" + acudiente);
                                 break;
                             case 4: 
                                 System.out.println("Ingresa la nuevo dirección: ");
                                 String direccion = scan.nextLine();
-                                camper1.getdi(direccion);
+                                camper1.direccion = direccion;
                                 System.out.println("La dirección fue actualizado con exito" + direccion);
                                 break;
                         }
@@ -98,13 +98,13 @@ public class Java_PYessica {
                 switch (opcion3){
                     case 1:
                         System.out.println("estado de los campers: ");
-                        System.out.println("Estudienate: " + camper1.getnom() + " ");
-                        System.out.println("Estado: " + camper1.getes());
+                        System.out.println("Estudienate: " + camper1.nombre + " ");
+                        System.out.println("Estado: " + camper1.estado);
                         break;
                     case 2:
                         System.out.println("Ruta de los trainers: ");
-                        System.out.println("Trainer: " + trainer1.getnom());
-                        System.out.println("Ruta: " + trainer1.getru());
+                        System.out.println("Trainer: " + trainer1.nombre);
+                        System.out.println("Ruta: " + trainer1.ruta);
                         break;
                     case 3:
                         System.out.println("Que deseas actualizar: ");
@@ -116,14 +116,14 @@ public class Java_PYessica {
                             case 1:
                                 System.out.println("Por favor ingresa el nuevo nombre: ");
                                 String nuevoNom = scan.nextLine();
-                                trainer1.getnom(nuevoNom);
-                                System.out.println("El nombre fue actualizado con exito: " + trainer1.getnom());
+                                trainer1.nombre =nuevoNom;
+                                System.out.println("El nombre fue actualizado con exito: " + trainer1.nombre);
                                 break;
                             case 2:
                                 System.out.println("Por favor ingresa la nueva ruta: ");
                                 String nuevaRut = scan.nextLine();
-                                trainer1.getru(nuevaRut);
-                                System.out.println("La nueva ruta fue actualizada con exito: " + trainer1.getru());
+                                trainer1.ruta = nuevaRut;
+                                System.out.println("La nueva ruta fue actualizada con exito: " + trainer1.ruta);
                                 break;
                         }
                         break;
@@ -197,32 +197,32 @@ public class Java_PYessica {
                             case 1: 
                                 System.out.println("Por favor ingrese el nuevo nombre: ");
                                 String nuevoN = scan.nextLine();
-                                camper1.getnom();
-                                System.out.println("El nuevo nombre fue actualizado con exito: " + camper1.getnom());
+                                camper1.nombre = nuevoN;
+                                System.out.println("El nuevo nombre fue actualizado con exito: " + camper1.nombre);
                                 break;
                             case 2:
                                 System.out.println("Por favor ingresa el nuevo apellido: ");
                                 String nuevoA = scan.nextLine();
-                                camper1.getape();
-                                System.out.println("El nuevo apellido fue actualizado con exito: " + camper1.getape());
+                                camper1.apellido = nuevoA;
+                                System.out.println("El nuevo apellido fue actualizado con exito: " + camper1.apellido);
                                 break;
                             case 3:
                                 System.out.println("Por favor ingresa la nueva dirección: ");
                                 String nuevaD = scan.nextLine();
-                                camper1.getdi();
-                                System.out.println("La nueva dirección fue actualizada con exito: "+ camper1.getdi());
+                                camper1.direccion = nuevaD;
+                                System.out.println("La nueva dirección fue actualizada con exito: "+ camper1.direccion);
                                 break;
                             case 4:
                                 System.out.println("Por favor ingresa el nuevo estado: ");
                                 String nuevoE = scan.nextLine();
-                                camper1.getes();
-                                System.out.println("El nuevo estado fue actualizado con exito: " + camper1.getes());
+                                camper1.estado = nuevoE;
+                                System.out.println("El nuevo estado fue actualizado con exito: " + camper1.estado);
                                 break;
                             case 5:
                                 System.out.println("Por favor ingresa el nuevo riesgo: ");
                                 String nuevoR = scan.nextLine();
-                                camper1.getri();
-                                System.out.println("El nuevo riesgo fue actualizado con exito: " + camper1.getri());      
+                                camper1.riesgo = nuevoR;
+                                System.out.println("El nuevo riesgo fue actualizado con exito: " + camper1.riesgo);      
                         }
                     case 4: 
                         System.out.println("Que camper deseas eliminar: ");
@@ -255,20 +255,20 @@ public class Java_PYessica {
                         if (opcion6 == 1){
                             System.out.println("Por favor ingresa el nuevo nombre: ");
                             String nuevonom = scan.nextLine();
-                            trainer1.getnom(nuevonom);
-                            System.out.println("El nombre del nuevo trainer fue actualizado con exuto: " + trainer1.getnom());
+                            trainer1.nombre = nuevonom;
+                            System.out.println("El nombre del nuevo trainer fue actualizado con exuto: " + trainer1.nombre);
                         }
                         else if (opcion6 == 2){
                             System.out.println("Por favor ingresa la nueva ruta: ");
                             String nuevaru = scan.nextLine();
-                            trainer1.getru(nuevaru);
-                            System.out.println("La nueva ruta fue actualizada con exito: " + trainer1.getru());
+                            trainer1.ruta = nuevaru;
+                            System.out.println("La nueva ruta fue actualizada con exito: " + trainer1.ruta);
                         }
                         else if (opcion6 == 3){
                             System.out.println("Por favor ingresa el nuevo horario: ");
                             String nuevoho = scan.nextLine();
-                            trainer1.getho(nuevoho);
-                            System.out.println("El nuevo horario fue actualizado con exito: " + trainer1.getho());
+                            trainer1.horario = nuevoho;
+                            System.out.println("El nuevo horario fue actualizado con exito: " + trainer1.horario);
                         }
                         break;
                     case 8:
@@ -298,17 +298,17 @@ public class Java_PYessica {
                         if (opcion7 == 1){
                             System.out.println("Por favor ingresa el nombre del coordinador: ");
                             String nombreC = scan.nextLine();
-                            coor.getnom(nombreC);
+                            coor.nombre = nombreC;
                         }
                         else if (opcion7 == 2){
                             System.out.println("Por favor ingresa el apellido del coordinador: ");
                             String apellidoC = scan.nextLine();
-                            coor.getape(apellidoC);
+                            coor.apellido = apellidoC;
                         }
                         else if (opcion7 == 3){
                             System.out.println("Por favor ingresa el cargo del coordinador: ");
                             String cargoC = scan.nextLine();
-                            coor.getcar(cargoC);
+                            coor.cargo = cargoC;
                         }
                         break;
                     case 12:

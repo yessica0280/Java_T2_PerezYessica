@@ -51,49 +51,6 @@ public class Campers {
         this.riesgo = riesgo;
         this.grupo = grupo;
     }
-    
-    
-    
-    public int getid(){
-        return id;
-    }
-    public String getfe(){
-        return fecha;
-    }
-    public String getusu(){
-        return usuario;
-    }
-    public String getcon(){
-        return contraseña;
-    }
-    public String getnom(){
-        return nombre;
-    }
-    public String getape(){
-        return apellido;
-    }
-    public String getdi(){
-        return direccion;
-    }
-    public String getacu(){
-        return acudiente;
-    }
-    public int getnum1(){
-        return numero_celular;
-    }
-    public int getnum2(){
-        return numero_fijo;
-    }
-    public String getes(){
-        return estado;
-    }
-    public String getri(){
-        return riesgo;
-    }
-    public String getgru(){
-        return grupo;
-    }
-
     @Override
     public String toString() {
         return "Campers{" + "id=" + id + ", fecha=" + fecha + ", usuario=" + usuario + ", contrase\u00f1a=" + contraseña + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", acudiente=" + acudiente + ", numero_celular=" + numero_celular + ", numero_fijo=" + numero_fijo + ", estado=" + estado + ", riesgo=" + riesgo + ", grupo=" + grupo + '}';

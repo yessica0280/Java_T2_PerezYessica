@@ -20,16 +20,6 @@ public class Coordinador {
         this.apellido = apellido;
         this.cargo = cargo;
     }
-    
-    public String getnom(){
-        return nombre;
-    }
-    public String getape(){
-        return apellido;
-    }
-    public String getcar(){
-        return cargo;
-    }
 
     @Override
     public String toString() {

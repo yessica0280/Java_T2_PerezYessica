@@ -23,19 +23,6 @@ public class Reporte {
         this.apellido = apellido;
         this.estado = estado;
     }
-    
-    public int getid(){
-        return id;
-    }
-    public String getnom(){
-        return nombre;
-    }
-    public String getape(){
-        return apellido;
-    }
-    public String getes(){
-        return estado;
-    }
 
     @Override
     public String toString() {

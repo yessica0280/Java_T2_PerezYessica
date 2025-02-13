@@ -23,22 +23,9 @@ public class Trainer {
         this.ruta = ruta;
         this.horario = horario;
     }
-    
-    public int getid() {
-        return id;
-    }
 
     @Override
     public String toString() {
         return "Trainer{" + "id=" + id + ", nombre=" + nombre + ", ruta=" + ruta + ", horario=" + horario + '}';
-    }
-    public String getnom(){
-        return nombre;
-    }
-    public String getru(){
-        return ruta;
-    }
-    public String getho(){
-        return horario;
     }
 }
